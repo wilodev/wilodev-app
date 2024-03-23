@@ -1,0 +1,43 @@
+{
+  "extends": "@react-native/typescript-config/tsconfig.json",
+  "compilerOptions": {
+    "noImplicitAny": true,
+    "strict": true,
+    "baseUrl": "./",
+    "paths": {
+      // Common modules such as assets, shared, state
+      "@/assets/*": ["src/assets/*"], // Folder where resources such as images, icons, etc. are stored.
+      "@/components/*": ["src/shared/components/*"], // Folder where components are stored.
+      "@/config/*": ["src/shared/config/*"], // Folder where the configuration files are stored.
+      "@/interfaces/*": ["src/shared/interfaces/*"], // Folder where the interfaces are stored.
+      "@/layouts/*": ["src/shared/layouts/*"], // Folder where the layouts are stored.
+      "@/lib/*": ["src/shared/lib/*"], // Folder where the libraries are stored.
+      "@/locales/*": ["src/shared/locales/*"], // Folder where the config translations are stored.
+      "@/providers/*": ["src/shared/providers/*"], // Folder where the providers are stored.
+      "@/navigation/*": ["src/navigation/*"], // Folder where the navigation files are stored.
+      "@/shared/*": ["src/shared/*"], // Folder where the folders or files used throughout the application are stored.
+      "@/state/*": ["src/state/*"], // Folder where redux files, sagas, etc. are stored.
+      "@/theme/*": ["src/shared/theme/*"], // Folder where the theme files are stored.
+      "@/typings/*": ["src/shared/typings/*"], // Folder where the types are stored.
+      "@/ui/*": ["src/shared/ui/*"], // Folder where user interface components are stored.
+      // Modules or applications, Each new application must be registered here
+      "@/acl/*": ["src/apps/acl/*"],
+      "@/authenticated/*": ["src/apps/authenticated/*"]
+      // Note: Remember that you must do the same in babel.config.js
+    }
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "react-native-reanimated.d.ts",
+    "index.js",
+    "typings/**/*.d.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "babel.config.js",
+    "metro.config.js",
+    "jest.config.js",
+    "jest.setup.ts"
+  ]
+}

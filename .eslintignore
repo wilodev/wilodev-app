@@ -1,0 +1,12 @@
+**/node_modules/**
+**/build/**
+**/dist/**
+**/config/**
+/coverage
+/db
+/node_modules
+nacl.json
+swagger.json
+jest/*.js
+__tests__/*
+__tests__/*.js
